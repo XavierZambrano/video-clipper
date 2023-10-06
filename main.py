@@ -2,15 +2,16 @@ from moviepy.editor import VideoFileClip, TextClip, CompositeVideoClip
 from utils import calculate_clip_end
 import os
 import time
-
-
-file = 'assets/Teenagers_from_Outer_Space_200.mp4'
-size = (540, 960)
-clip_duration = 60
-text_prefix = 'Part'
+import toml
 
 
 if __name__ == '__main__':
+    config = toml.load('config.toml')
+    file = config['file']
+    size = (config['size'][0], config['size'][1])
+    clip_duration = config['clip_duration']
+    text_prefix = config['text_prefix']
+
     results_dir = 'results/'
     if not os.path.exists(results_dir):
         os.makedirs(results_dir)
