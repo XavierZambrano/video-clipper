@@ -10,6 +10,13 @@ Generate clips from a video file.
 pip install -r requirements.txt
 ```
 
-### Usage
+ImageMagick is required. 
 
-Use main.py, change the ```file```, ```size```, ```clip_duration``` and ```text_prefix``` variables to your needs.
+If you are using Linux you must edit the policy.xml
+/etc/ImageMagick-6/policy.xml comment out the line (its at the end):
+```
+<!-- <policy domain="path" rights="none" pattern="@*" /> -->
+```
+
+### Usage
+Update the variables in config.toml and execute main.py
