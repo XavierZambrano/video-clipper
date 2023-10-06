@@ -1,6 +1,7 @@
 from moviepy.editor import VideoFileClip, TextClip, CompositeVideoClip
 from utils import calculate_clip_end
 import os
+import time
 
 
 file = 'assets/Teenagers_from_Outer_Space_200.mp4'
@@ -38,7 +39,7 @@ if __name__ == '__main__':
             bg_color=(0, 0, 0)
         )
 
-        final_clip.write_videofile(f'results/clip_{j}.mp4', codec='libx264')
+        final_clip.write_videofile(f'results/{time.time()}_clip_{j}.mp4', codec='libx264')
 
         clips_processed_total_duration += clip.duration
         clips_processed += 1
