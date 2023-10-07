@@ -2,3 +2,6 @@ file = 'assets/Teenagers_from_Outer_Space_200.mp4'
 size = [540, 960]
 clip_duration = 60
 text_prefix = 'Part'
+bottom_text = 'This is an example'
+bottom_text_fontsize = 48
+test = false

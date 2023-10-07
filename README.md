@@ -20,3 +20,6 @@ If you are using Linux you must edit the policy.xml
 
 ### Usage
 Update the variables in config.toml and execute main.py
+
+#### test
+If test = true, only generate a frame called test.png, use this option to test the fontsize
