@@ -4,4 +4,5 @@ clip_duration = 60
 text_prefix = 'Part'
 bottom_text = 'This is an example'
 bottom_text_fontsize = 48
+bottom_text_y_position = 0.8
 test = false

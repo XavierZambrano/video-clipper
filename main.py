@@ -36,7 +36,9 @@ if __name__ == '__main__':
         clip = large_video.subclip(clip_start, clip_end)
         clip = clip.resize(width=size[0])
         clip_text = clip_text.set_position(('center', size[1] * .1)).set_duration(clip.duration)
-        clip_bottom_text = clip_bottom_text.set_position(('center', size[1] * .7)).set_duration(clip_duration)
+        clip_bottom_text = clip_bottom_text.set_position(
+            ('center', size[1] * config['bottom_text_y_position'])
+        ).set_duration(clip_duration)
         clip = clip.set_position(('center', 'center'))
 
         final_clip = CompositeVideoClip(
